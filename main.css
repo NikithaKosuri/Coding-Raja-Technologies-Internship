@@ -1,0 +1,64 @@
+.vid video{
+    width:100%;
+    left: 0 ;
+    top:0;
+    height: 100%;
+    position:absolute;
+    object-fit:cover;
+}
+.navbar {
+    margin-top:8px;
+    background-color: transparent;
+    width:100%;
+    border-radius:46px;
+    box-shadow:1px 1px 20px rgba(0,0,0,.5);
+    box-shadow:-1px -1px 20px rgba(0,0,0,.5);
+    
+}
+
+#logo{
+    color:black;
+    padding-left:10px;
+}
+#navbar .navbar-toggler {
+          
+            border-color:none;
+           &:hover{
+              background-color: transparent;
+              border-color:none !important;
+              border:none !important 
+           }
+          
+ }
+.navbar-light .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+     
+  
+   &:hover{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='skyblue' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  border:none;
+}
+
+
+#navbar .nav-item a{
+    color:black;
+    
+    &:hover{
+        background-color:white;
+        color:#55d5ff;
+        border-radius:25px;
+        padding-left:4px;
+       
+        &:active{
+      
+        box-shadow:8px 8px 40px white;
+    }
+    }
+         
+
+}
+
+
+
+

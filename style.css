@@ -1,0 +1,232 @@
+
+   
+
+.text {
+    padding-top:5%; 
+    padding-bottom:3%;
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size:50px;
+    font-weight: 700;
+    
+    color:white;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+
+}
+.h,.box{
+      margin-top:25px;
+      text-shadow: 1px 1px 0 #FFF;
+      color: #61677C;
+      box-shadow: rgba(50, 50, 93, 0.05) 0px 2px 5px .5px, rgba(0, 0, 0, 0.3) 0px 1px 3px .5px;
+}
+
+.input-group {
+	width: 100%;
+	height: auto;
+	.label {
+    display: block;
+    padding-left: 10px;
+		font-size: 20px;
+		letter-spacing: 0.05em;
+    color: #61677C;
+    text-shadow: 1px 1px 0 #FFF;
+    margin-bottom: 8px;
+	}
+	.input {
+		display: block;    
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+		width: 100%;
+		background-color: transparent;
+		font-size: 18px;
+		letter-spacing: 0.1em;
+    color: #61677C;
+    text-shadow: 1px 1px 0 #FFF;
+		padding: 12px;
+		outline: none;
+		border: none;
+		border-radius: 0px;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    transition: all 0.2s ease-in-out;
+    &:focus {
+      box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+    }
+	}
+}
+
+.container button {
+
+	background-color:white;
+  color:#111110;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0.07em;
+	text-shadow: 1px 1px 0 #FFF;
+	padding: 8px 20px;
+	border: 0;
+	border-radius: 30px;
+	box-shadow:  3px 3px 5px #BABECC,  -4px -4px 10px #FFF;
+	outline: 0 !important;
+	cursor: pointer;
+	transition: all 0.15s ease-in-out;
+	margin-bottom:6px;
+	&:hover {
+		box-shadow: -2px -2px 5px #FFF, -3px -3px 7px #BABECC;
+	  background-color:white;
+	  color:black;
+	}
+	&:active {
+	  background-color:black;
+		box-shadow: inset 2px 2px 3px #BABECC, inset -2px -2px 3px #FFF;
+	}
+}
+
+div .form-control{
+    border: none;
+}
+
+#resume-form{
+  background-color:white;
+}
+
+.t1{
+    display:none;
+    border:1px solid #91a6ff;
+.myimg{
+    /* border:1px solid red; */
+    border-radius:50%;
+    width:200px;
+}
+
+div .bg{
+   background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
+}
+#nameT2{
+    color:#91a6ff;
+}
+}
+
+/*Template -2*/
+
+
+.t2{
+ display:none;
+    border:1px solid rgb(201,199,222);
+    
+
+.myimg{
+    /* border:1px solid red; */
+    border-radius:50%;
+    width:200px;
+}
+#nameT2{
+    color:#D7FFFE;
+}
+
+div .bg{
+ background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+}
+h1,h3{
+    color:#6192a6dd;
+}
+}
+
+
+.t3{
+     display:none;
+    border:1px solid rgb(201,199,222);
+    
+
+.myimg{
+    /* border:1px solid red; */
+    border-radius:50%;
+    width:200px;
+}
+
+div .bg{
+ background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+ 
+}
+.left{
+    border-radius:100px;
+}
+#nameT2{
+    color:#505285;
+}
+h3{
+    color:#64349bf8;
+}
+}
+
+.t4{
+    border:1px solid rgb(201,199,222);
+    display:none;
+
+.myimg{
+    /* border:1px solid red; */
+    border-radius:50%;
+    width:200px;
+}
+
+div .bg{
+ border:1px solid #ffe795;
+}
+.left{
+    background-color:#f0d98ca2;
+}
+.col2{
+    background-color:#f0e6c8f8;
+}
+#nameT2{
+    color:#aea791f8;
+}
+h3{
+    color:#aea791f8;
+}
+}
+
+
+@media printCV{
+    /* Hide elements with class 'no-print' when printing */
+    .no-print {
+        display: none;
+    }
+    
+    .t1{
+    display:none;
+    border:1px solid #91a6ff;
+.myimg{
+    /* border:1px solid red; */
+    border-radius:50%;
+    width:200px;
+}
+
+div .bg{
+   background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #91a6ff 74%);
+}
+#nameT2{
+    color:#91a6ff;
+}
+}
+}
+@media print{
+    #resume-template *{
+        display:block;
+    }
+}

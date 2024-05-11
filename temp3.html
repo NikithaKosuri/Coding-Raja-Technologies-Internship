@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>        
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+          <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <title >Resume Generator</title>        
+    </head>
+    <body>                   
+      
+        
+        <!--Container starts-->
+        <div class="container box" id="resume-form">
+            <h1 class="text text-center">Resume Generator</h1>
+            <!--row starts-->
+            <div class="row">
+                
+               <!--Personal information starts-->
+               <div class="col-md-6 left" >
+                   <!--first column-->
+                   <h3 class="h text-center">Personal Information </h3>
+                   
+                   <!--Name field-->
+                   <div class="form-group input-group">
+                       <label class="input-group label" for="name">Name:  
+                       </label>
+                           <input 
+                           type="text"
+                           id="name"
+                           class="form-control input-group input"
+                           placeholder="EG: Sweety" 
+                          >                     
+                   </div>
+                   
+                   <!--Contact field-->
+                   <div class="form-group input-group mt-3">
+                       <label for="contact" class="input-group label">Contact number:
+                       </label>
+                           <input 
+                           type="number"
+                           id="contact"
+                           class="form-control input-group input"
+                           placeholder="9641XXXXXX">                
+                   </div>
+                   
+                   <!--Address field-->
+                   <div class="form-group input-group mt-3">
+                       <label class="input-group label"for="address">Address:
+                       </label>
+                           <textarea
+                           id="address"
+                           placeholder="XXXX street"
+                           class="form-control input-group input"                          
+                           rows="6"
+                          ></textarea>                      
+                   </div>
+                   <!-- placeholder="XXXX street"-->
+                   
+                   <!--skills start -->
+                  <div class="form-group input-group mt-3" id="s">
+                       <label class="input-group label" for="">Skills
+                       </label>
+                           <textarea
+                            placeholder="Enter here"
+                            class="form-control sField input-group input" 
+                            rows="3"
+                          ></textarea>                          
+                                                                          
+                  <div class="container text-center mt-2" 
+                  id="sAddButton">
+                      <button onclick="addNewsField()" class="btn btn-primary btn-sm">
+                          Add
+                      </button>
+                      <button onclick="removeLastFields()" class="btn btn-primary btn-sm">
+                          Delete
+                      </button>
+                  </div>
+                  
+                 </div>
+                 <!--skills ends -->
+                   
+                  
+               </div>
+               <!--Personal information ends-->
+               
+               <!--professtional information starts -->
+               <div class="col-md-6">
+                   <!--second column-->
+                   <h3 class="h text-center">Professional Information </h3>
+                   
+                   <div class="form-group input-group mt-3">
+                      <label class="input-group label"for="obj">Objective:
+                      </label>
+                          <textarea
+                           id="obj"
+                           class="form-control input-group input"
+                           placeholder="Enter here"
+                           rows="5"
+                          ></textarea>                      
+                  </div>
+                  
+                  <!--Work experience -->
+                  <div class="form-group input-group mt-3" id="we">
+                       <label class="input-group label" for="">Work Experience:
+                       </label>
+                           <textarea
+                            placeholder="Enter here"
+                            class="form-control weField input-group input" 
+                            rows="3"
+                          ></textarea>                          
+                                                                          
+                  <div class="container text-center mt-2" 
+                  id="weAddButton">
+                      <button onclick="addNewField()" class="btn btn-primary btn-sm">
+                          Add
+                      </button>
+                      <button onclick="removeLastFieldwe()" class="btn btn-primary btn-sm">
+                          Delete
+                      </button>
+                  </div>
+                  
+                 </div>
+                 <!--Work experience ends -->
+                 
+                 <!--Academics-->
+                 
+                 <div class="form-group input-group mt-3" id="aq">
+                       <label class="input-group label"
+                       for="">
+                           Academic Qualification:
+                       </label>
+                          <textarea
+                          placeholder="Enter here"
+                          class="form-control aqField input-group input" 
+                          rows="3"
+                         ></textarea>                      
+                  <div class="container text-center mt-2" 
+                  id="aqAddButton">
+                      <button onClick="addNewaqField()"
+                      class="btn btn-primary btn-sm">
+                          Add
+                      </button>
+                      <button onclick="removeLastFieldaq()" class="btn btn-primary btn-sm">
+                          Delete
+                      </button>
+                  </div>
+                  
+                 </div> 
+                 <!--Academics--> 
+                </div>
+               <!--professtional information ends -->
+            </div>
+           <!--row ends-->
+           
+           <!--CV button starts-->
+           <div class="container text-center mt-3">
+               <button onclick="generateCV();hideFormAndShowTemplate()" class="btn btn-primary btn-lg">
+                  
+                   Generate CV
+               </button>
+           </div>
+           <!--CV button ends-->
+           
+        </div>
+        <!--Container ends-->
+        
+        <!--resume template starts-->
+        <div class="container t3 mt-5" id="resume-template">
+            
+            <!--row starts-->
+            <div class="row">
+                
+                <!--column one starts-->
+                <div class="col-md-4 text-center py-5 bg left">
+                    <img src="profilepic.jpg" alt="" class="img-fluid myimg">
+                    
+                    <div class="container3">
+                     <p id="nameT1">xxxxx xxxxxxx</p>
+                     <p id="numT1">8712222222</p>
+                     <p id="addressT1">Sarada colony,Guntur,Andhra Pradesh,India
+                     </p>
+                     <hr/>
+                </div>
+                <!--skills starts-->
+                    <div class="card mt-4">
+                        <h3 class="card-header bg">        
+                              Skills
+                        </h3>                                        
+                        <div class="card-body">
+                            <ul id="sT1">
+                                <li>internship 1
+                                </li>
+                                <li>internship 1
+                                </li>
+                                <li>internship 1
+                                </li>    
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <!--skills ends-->
+                </div>                               
+                
+                <!--column one ends-->
+                
+                <!--column two starts-->
+                <div class="col-md-8 py-5 col2">
+                    
+                    <h1 id="nameT2"class="text-center" style="font-weight:bold">xxxxxx xxxxx</h1>
+                    
+                    <!--objevtive starts-->
+                    <div class="card mt-4">
+                        <h3 class="card-header bg">        
+                              Objective
+                        </h3>                                        
+                        <div class="card-body">
+                            <p id="obj2">Looking for a challenging position ,where i can utilise my skills and thereby contributing to the company growth.
+                            </p>
+                        </div>
+                    </div>
+                    <!--objective ends-->
+                    
+                    <!--Experience Field starts-->
+                    <div class="card mt-4">
+                        <h3 class="card-header bg">        
+                              Work Experience 
+                        </h3>                                        
+                        <div class="card-body">
+                            <ul id="weT1">
+                                <li>internship 1
+                                </li>
+                                <li>internship 1
+                                </li>
+                                <li>internship 1
+                                </li>    
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <!--Experience Field ends-->
+                    
+                   <!--Experience Field starts-->
+                    <div class="card mt-4">
+                        <h3 class="card-header bg">        
+                              Academic Qualifications
+                        </h3>                                        
+                        <div class="card-body">
+                            <ul id="aqT1">
+                               <li>qualification 1</li>
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <!--Experience Field ends-->
+                     
+                   <!-- Add this button to trigger PDF download -->
+
+
+
+
+<button id="downloadButton">Download</button>
+
+
+<!-- Add an empty <div> to contain the content to be downloaded -->
+
+
+
+                     
+                    <!--Print button starts-->
+                 
+
+
+                    <div class="container mt-3 text-center">
+                        <button onclick="printButton()"  class="btn bg    ">
+                            Print CV
+                        </button>
+                    </div>
+                    <!--Print button ends-->
+                </div>
+                <!--Column two ends-->
+            </div>
+            <!--row ends-->
+        </div>
+      <!--resume template ends  -->
+      
+  <script> const text = "Resume Generator"; const placeholder = document.getElementById('placeholder'); const span = document.getElementById('auto-type'); let index = 0; function autoType() { span.textContent += text[index]; index++; if(index === text.length) { index = 0; // Reset index to start typing from the beginning span.textContent = ''; // Clear the text content of the span } } setInterval(autoType, 100); // Adjust typing speed here (milliseconds) </script>
+      
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="script.js" ></script>
+    </body>
+</html>
